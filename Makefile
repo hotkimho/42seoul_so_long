@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hokim <hokim@student.42.fr>                +#+  +:+       +#+         #
+#    By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/01/02 17:03:19 by hokim             #+#    #+#              #
-#    Updated: 2022/01/02 20:09:00 by hokim            ###   ########.fr        #
+#    Created: 2022/01/02 17:03:19 by hkim2             #+#    #+#              #
+#    Updated: 2022/01/07 18:59:03 by hkim2            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,14 +15,17 @@ NAME	=	a.out
 # Compiler and flags
 CC		=	gcc
 CFLAGS	=	-Wall -Werror -Wextra
-#CLIB	=	-Lmlx -lmlx -framework OpenGL -framework Appkit -Imlx
 CLIB	=	-Lmlx -lmlx -framework Metal -framework Metalkit -Imlx
 
 INC_DIR = ./include/
 SRC_DIR = ./src/
+LIB_DIR = ./lib/
+
+LIB_NAME = ./lib/libft.a
+
 # SRCS and OBJS
-SRCS	=	\
-			src/so_long.c
+SRCS	=	src/so_long.c\
+			src/read_map.c
 OBJS = $(SRCS:%.c=%.o)
 
 #
@@ -35,7 +38,8 @@ all		: $(NAME)
 	$(CC) $(CFLAGS)
 
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(CLIB) $(SRCS) -I $(INC_DIR) -o $(NAME)
+	make -C $(LIB_DIR)
+	$(CC) $(CFLAGS) $(CLIB) $(SRCS) -L $(LIB_DIR) -lft -I $(INC_DIR) -o $(NAME)
 	install_name_tool -change libmlx.dylib mlx/libmlx.dylib $(NAME)
 
 clean	:
