@@ -3,17 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hokim <hokim@student.42.fr>                +#+  +:+       +#+        */
+/*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/02 17:00:36 by hokim             #+#    #+#             */
-/*   Updated: 2022/01/06 20:38:27 by hokim            ###   ########.fr       */
+/*   Created: 2022/01/02 17:00:36 by hkim2             #+#    #+#             */
+/*   Updated: 2022/01/07 21:08:04 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 #include <stdio.h>
-int main() 
+
+
+
+void    game_init(t_game *game, char *filename)
 {
+    map_init(game, filename);
+}
+
+int main(int argc, char **argv) 
+{
+    t_game      game;
+    
+    argc = 0;
+    game_init(&game, argv[1]);
+    
+    /*
     void *mlx_ptr;
     void *win_ptr;
     void *img_ptr;
@@ -35,6 +49,9 @@ int main()
     mlx_put_image_to_window(mlx_ptr, win_ptr, img2_ptr, 64,0);
     printf("%s\n", (char *)img_ptr);
     mlx_loop(mlx_ptr);
-
+    */
+    
+    //printf("%s %s", argv[1], argv[2]);
+    
     return (0);
 }
