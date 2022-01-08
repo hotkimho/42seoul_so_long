@@ -6,13 +6,13 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/02 19:47:42 by hokim             #+#    #+#             */
-/*   Updated: 2022/01/07 21:18:23 by hkim2            ###   ########.fr       */
+/*   Updated: 2022/01/08 18:05:55 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
- 
+
 # include <stdlib.h>
 # include <fcntl.h>
 # include "../mlx/mlx.h"
@@ -21,6 +21,6 @@
 
 typedef struct s_game
 {
-    t_map       map;
-}               t_game;
+	t_map	map;
+}			t_game;
 #endif
