@@ -6,18 +6,13 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 17:40:22 by hkim2             #+#    #+#             */
-/*   Updated: 2022/01/09 19:09:44 by hkim2            ###   ########.fr       */
+/*   Updated: 2022/01/09 21:07:17 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 #include <stdio.h>
-/*
-지도는 벽으로 둘러쌓여 있어야 합니다. 그렇지 않으면 에러를 반환해야 합니다.
-지도는 최소한 하나의 출구, 하나의 물고기 (수집품), 하나의 시작 지점을 포함해야 합니다.
-지도에서 출구로 가는 길의 유무 판단 (검증)은 굳이 해주지 않으셔도 됩니다.
-지도는 반드시 직사각형 모양이어야 합니다.
-*/
+
 void	check_wall(char **map, int row, int col)
 {
 	int		idx;
@@ -42,7 +37,7 @@ void	check_wall(char **map, int row, int col)
 	}
 }
 
-void	check_player(char **map, int row, int col)
+void	check_player(t_game *game, int row, int col)
 {
 	int		i;
 	int		j;
@@ -55,8 +50,12 @@ void	check_player(char **map, int row, int col)
 		j = 0;
 		while (j < col)
 		{
-			if (map[i][j] == PLAYER)
+			if (game->map.map[i][j] == PLAYER)
+			{
 				is_player++;
+				game->player.pos.x = j;
+				game->player.pos.y = i;
+			}
 			if (is_player > 1)
 				error_msg("map_player_error");
 			j++;
@@ -123,7 +122,7 @@ void	check_map(t_game *game)
 	col = game->map.col;
 	row = game->map.row;
 	check_wall(game->map.map, row, col);
-	check_player(game->map.map, row, col);
+	check_player(game, row, col);
 	check_collectible(game->map.map, row, col);
 	check_exit(game->map.map, row, col);
 }

@@ -6,14 +6,14 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 17:49:01 by hkim2             #+#    #+#             */
-/*   Updated: 2022/01/09 18:49:56 by hkim2            ###   ########.fr       */
+/*   Updated: 2022/01/09 21:37:46 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MAP_H
 # define MAP_H
 
-# define SPACE	38
+# define TILE	48
 # define WALL	49
 # define COLLECTIBLE	'C'
 # define EXIT	'E'

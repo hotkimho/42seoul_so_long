@@ -6,7 +6,7 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 17:44:05 by hkim2             #+#    #+#             */
-/*   Updated: 2022/01/09 19:10:58 by hkim2            ###   ########.fr       */
+/*   Updated: 2022/01/09 20:15:22 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,4 @@ void	map_init(t_game *game, char *filename)
 	malloc_map(game);
 	read_map(game, filename);
 	check_map(game);
-	
-	ft_putstr_fd("정상!", 2);
 }
