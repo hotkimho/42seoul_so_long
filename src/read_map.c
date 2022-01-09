@@ -6,19 +6,12 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 17:44:05 by hkim2             #+#    #+#             */
-/*   Updated: 2022/01/08 18:24:47 by hkim2            ###   ########.fr       */
+/*   Updated: 2022/01/09 19:10:58 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 #include <stdio.h>
-
-void	error_msg(char *message)
-{
-	ft_putstr_fd(message, 2);
-	ft_putstr_fd("\n", 2);
-	exit(EXIT_FAILURE);
-}
 
 int	open_file(char *filename)
 {
@@ -30,7 +23,7 @@ int	open_file(char *filename)
 	return (fd);
 }
 
-void	check_map(t_game *game, char *filename)
+void	cal_map_size(t_game *game, char *filename)
 {
 	int		fd;
 	char	buf;
@@ -82,17 +75,33 @@ void	malloc_map(t_game *game)
 void	read_map(t_game *game, char *filename)
 {
 	int		fd;
+	char	buf;
+	int		row;
+	int		col;
 
 	fd = open_file(filename);
-	
-
+	row = 0;
+	col = 0;
+	while (read(fd, &buf, 1))
+	{
+		if (buf == '\n')
+		{
+			row++;
+			col = 0;
+		}
+		else
+			game->map.map[row][col++] = buf;
+	}
 }
 
 void	map_init(t_game *game, char *filename)
 {
 	game->map.col = 0;
 	game->map.row = 1;
-	check_map(game, filename);
+	cal_map_size(game, filename);
 	malloc_map(game);
+	read_map(game, filename);
+	check_map(game);
+	
 	ft_putstr_fd("정상!", 2);
 }
