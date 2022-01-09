@@ -6,7 +6,7 @@
 #    By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/02 17:03:19 by hkim2             #+#    #+#              #
-#    Updated: 2022/01/07 18:59:03 by hkim2            ###   ########.fr        #
+#    Updated: 2022/01/09 21:10:38 by hkim2            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,11 @@ LIB_NAME = ./lib/libft.a
 
 # SRCS and OBJS
 SRCS	=	src/so_long.c\
-			src/read_map.c
+			src/read_map.c\
+			src/check_map.c\
+			src/error.c\
+			src/read_image.c\
+			src/draw.c
 OBJS = $(SRCS:%.c=%.o)
 
 #
