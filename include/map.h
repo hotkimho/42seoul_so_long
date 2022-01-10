@@ -6,7 +6,7 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 17:49:01 by hkim2             #+#    #+#             */
-/*   Updated: 2022/01/09 21:37:46 by hkim2            ###   ########.fr       */
+/*   Updated: 2022/01/10 20:02:33 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,8 @@ void	read_map(t_game *game, char *filename);
 
 void	check_wall(char **map, int row, int col);
 void	check_map(t_game *game);
+void	check_player(t_game *game, int row, int col);
+int		check_collectible(char **map, int row, int col);
+void	check_exit(char **map, int row, int col);
+
 #endif

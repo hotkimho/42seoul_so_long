@@ -6,7 +6,7 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 20:13:29 by hkim2             #+#    #+#             */
-/*   Updated: 2022/01/09 21:36:32 by hkim2            ###   ########.fr       */
+/*   Updated: 2022/01/10 20:18:05 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void	image_texture_init(t_game *game)
 	game->wall = get_image_ptr(game, "texture/wall.xpm");
 	game->player.img = get_image_ptr(game, "texture/player.xpm");
 	game->collectible = get_image_ptr(game, "texture/ball.xpm");
+	game->exit = get_image_ptr(game, "texture/ball.xpm");
 }
 
 void	image_init(t_game *game)
