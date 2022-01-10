@@ -6,7 +6,7 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 21:10:20 by hkim2             #+#    #+#             */
-/*   Updated: 2022/01/09 21:34:39 by hkim2            ###   ########.fr       */
+/*   Updated: 2022/01/10 20:19:13 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,15 @@ void	mlx_draw(t_game *game)
 		while (x < game->map.col)
 		{
 			if (game->map.map[y][x] == WALL)
-				draw_obj(game, game->wall.img, x, y);
+				draw_wall(game, x, y);
 			if (game->map.map[y][x] == TILE)
-				draw_obj(game, game->tile.img, x, y);
+				draw_tile(game, x, y);
 			if (game->map.map[y][x] == PLAYER)
-				draw_obj(game, game->player.img.img, x, y);
+				draw_player(game, x, y);
 			if (game->map.map[y][x] == COLLECTIBLE)
-				draw_obj(game, game->collectible.img, x, y);
+				draw_collectible(game, x, y);
+			if (game->map.map[y][x] == EXIT)
+				draw_exit(game, x, y);
 			x++;
 		}
 		y++;
