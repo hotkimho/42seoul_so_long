@@ -6,7 +6,7 @@
 #    By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/02 17:03:19 by hkim2             #+#    #+#              #
-#    Updated: 2022/01/09 21:10:38 by hkim2            ###   ########.fr        #
+#    Updated: 2022/01/10 18:04:32 by hkim2            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,9 @@ SRCS	=	src/so_long.c\
 			src/check_map.c\
 			src/error.c\
 			src/read_image.c\
-			src/draw.c
+			src/draw.c\
+			src/draw_obj.c\
+			src/key_hook.c
 OBJS = $(SRCS:%.c=%.o)
 
 #
