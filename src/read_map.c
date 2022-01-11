@@ -6,7 +6,7 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 17:44:05 by hkim2             #+#    #+#             */
-/*   Updated: 2022/01/09 20:15:22 by hkim2            ###   ########.fr       */
+/*   Updated: 2022/01/11 15:57:18 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	open_file(char *filename)
 
 	fd = open(filename, O_RDONLY);
 	if (fd < 0)
-		error_msg("fileopen error");
+		error_msg("FILEOPEN ERROR");
 	return (fd);
 }
 
@@ -36,7 +36,7 @@ void	cal_map_size(t_game *game, char *filename)
 		if (buf == '\n')
 		{
 			if (check_col != 0 && check_col != game->map.col)
-				error_msg("map check error");
+				error_msg("MAP CHECK ERROR");
 			check_col = game->map.col;
 			game->map.row++;
 			game->map.col = 0;
@@ -45,7 +45,7 @@ void	cal_map_size(t_game *game, char *filename)
 			game->map.col++;
 	}
 	if (game->map.col < check_col)
-		error_msg("map check error");
+		error_msg("MAP CHECK ERROR");
 	close(fd);
 }
 
@@ -60,13 +60,13 @@ void	malloc_map(t_game *game)
 	row = game->map.row;
 	ptr = (char **) malloc(sizeof(char *) * row);
 	if (!ptr)
-		error_msg("map malloc error");
+		error_msg("MAP MALLOC ERROR");
 	idx = 0;
 	while (idx < row)
 	{
 		ptr[idx] = (char *) malloc(sizeof(char) * col);
 		if (!ptr[idx])
-			error_msg("map malloc error");
+			error_msg("MAP MALLOC ERROR");
 		idx++;
 	}
 	game->map.map = ptr;
