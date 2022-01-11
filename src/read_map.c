@@ -6,7 +6,7 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 17:44:05 by hkim2             #+#    #+#             */
-/*   Updated: 2022/01/11 15:57:18 by hkim2            ###   ########.fr       */
+/*   Updated: 2022/01/11 18:57:25 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,9 @@ void	read_map(t_game *game, char *filename)
 	col = 0;
 	while (read(fd, &buf, 1))
 	{
+		if (buf != '0' && buf != '1' && buf != 'P'
+			&& buf != 'E' && buf != 'C' && buf != '\n')
+			error_msg("MAP CHECK ERROR");
 		if (buf == '\n')
 		{
 			row++;

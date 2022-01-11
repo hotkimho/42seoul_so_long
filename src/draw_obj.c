@@ -6,7 +6,7 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 17:58:46 by hkim2             #+#    #+#             */
-/*   Updated: 2022/01/10 20:20:37 by hkim2            ###   ########.fr       */
+/*   Updated: 2022/01/11 20:14:31 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,5 @@ void	draw_collectible(t_game *game, int x, int y)
 void	draw_exit(t_game *game, int x, int y)
 {
 	draw_tile(game, x, y);
-	draw_obj(game, game->wall.img, x, y);
+	draw_obj(game, game->exit.img, x, y);
 }
