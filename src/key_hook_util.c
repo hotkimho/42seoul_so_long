@@ -6,7 +6,7 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 15:51:07 by hkim2             #+#    #+#             */
-/*   Updated: 2022/01/11 18:28:35 by hkim2            ###   ########.fr       */
+/*   Updated: 2022/01/13 20:22:43 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ void	set_player(t_game *game, int x, int y)
 
 void	print_movement(t_game *game)
 {
-	ft_putstr_fd("number of movement: ", 2);
-	ft_putnbr_fd(++game->movement, 2);
+	ft_putstr_fd("number of movement: ", 1);
+	ft_putnbr_fd(++game->movement, 1);
 	ft_putchar_fd('\n', 2);
 }
 

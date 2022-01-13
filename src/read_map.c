@@ -6,12 +6,11 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 17:44:05 by hkim2             #+#    #+#             */
-/*   Updated: 2022/01/11 18:57:25 by hkim2            ###   ########.fr       */
+/*   Updated: 2022/01/13 19:33:01 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-#include <stdio.h>
 
 int	open_file(char *filename)
 {

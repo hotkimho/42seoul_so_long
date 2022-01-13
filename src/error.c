@@ -6,11 +6,11 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 17:41:22 by hkim2             #+#    #+#             */
-/*   Updated: 2022/01/11 15:57:54 by hkim2            ###   ########.fr       */
+/*   Updated: 2022/01/13 16:57:27 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "error.h"
 
 void	error_msg(char *message)
 {

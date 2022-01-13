@@ -6,12 +6,11 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 20:13:29 by hkim2             #+#    #+#             */
-/*   Updated: 2022/01/11 20:14:11 by hkim2            ###   ########.fr       */
+/*   Updated: 2022/01/13 19:33:06 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-#include <stdio.h>
 
 t_img	get_image_ptr(t_game *game, char *image)
 {

@@ -6,12 +6,11 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/02 17:00:36 by hkim2             #+#    #+#             */
-/*   Updated: 2022/01/11 20:08:48 by hkim2            ###   ########.fr       */
+/*   Updated: 2022/01/13 20:23:29 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-#include <stdio.h>
 
 void	game_init(t_game *game, char *filename)
 {
@@ -21,7 +20,7 @@ void	game_init(t_game *game, char *filename)
 	game->mlx = mlx_init();
 	mlx_get_screen_size(game->mlx, &game->width, &game->height);
 	game->win = mlx_new_window(game->mlx, game->width,
-			game->height, "hello");
+			game->height, "so_long");
 	image_init(game);
 	mlx_draw(game);
 }
