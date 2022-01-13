@@ -6,7 +6,7 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 17:40:22 by hkim2             #+#    #+#             */
-/*   Updated: 2022/01/10 20:02:39 by hkim2            ###   ########.fr       */
+/*   Updated: 2022/01/13 21:03:53 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,18 @@ void	check_wall(char **map, int row, int col)
 	while (idx < col)
 	{
 		if (map[0][idx] != WALL)
-			error_msg("map_horizontal_wall_error");
+			error_msg("MAP_HORIZONTAL_WALL_ERROR");
 		if (map[row - 1][idx] != WALL)
-			error_msg("map_horizontal_error");
+			error_msg("MAP_HORIZONTAL_WALL_ERROR");
 		idx++;
 	}
 	idx = 0;
 	while (idx < row)
 	{
 		if (map[idx][0] != WALL)
-			error_msg("map_vertical_wall_error");
+			error_msg("MAP_VERTICAL_WALL_ERROR");
 		if (map[idx][col - 1] != WALL)
-			error_msg("map_vertical_error");
+			error_msg("MAP_VERTICAL_WALL_ERROR");
 		idx++;
 	}
 }
