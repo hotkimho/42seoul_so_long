@@ -6,14 +6,13 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/02 19:47:42 by hokim             #+#    #+#             */
-/*   Updated: 2022/01/11 20:08:06 by hkim2            ###   ########.fr       */
+/*   Updated: 2022/01/13 20:23:09 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
-# include <stdio.h>
 # include <fcntl.h>
 # include "../mlx/mlx.h"
 # include "map.h"

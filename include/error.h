@@ -6,12 +6,14 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 17:46:55 by hkim2             #+#    #+#             */
-/*   Updated: 2022/01/09 17:47:44 by hkim2            ###   ########.fr       */
+/*   Updated: 2022/01/13 16:57:40 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ERROR_H
 # define ERROR_H
+
+# include "../lib/libft.h"
 
 void	error_msg(char *message);
 #endif
