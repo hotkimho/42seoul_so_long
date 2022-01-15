@@ -6,7 +6,7 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 17:40:22 by hkim2             #+#    #+#             */
-/*   Updated: 2022/01/13 21:03:53 by hkim2            ###   ########.fr       */
+/*   Updated: 2022/01/15 18:45:11 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,13 +57,13 @@ void	check_player(t_game *game, int row, int col)
 				game->player.pos.y = i;
 			}
 			if (is_player > 1)
-				error_msg("map_player_error");
+				error_msg("MAP_PLAYER_ERROR");
 			j++;
 		}
 		i++;
 	}
 	if (is_player == 0)
-		error_msg("map_player_error");
+		error_msg("MAP_PLAYER_ERROR");
 }
 
 int	check_collectible(char **map, int row, int col)
@@ -86,7 +86,7 @@ int	check_collectible(char **map, int row, int col)
 		i++;
 	}
 	if (is_collectible == 0)
-		error_msg("map_collectible_error");
+		error_msg("MAP_COLLECTILBE_ERROR");
 	return (is_collectible);
 }
 
@@ -106,13 +106,13 @@ void	check_exit(char **map, int row, int col)
 			if (map[i][j] == EXIT)
 				is_exit++;
 			if (is_exit > 1)
-				error_msg("map_exit_error");
+				error_msg("MAP_EXIT_ERROR");
 			j++;
 		}
 		i++;
 	}
 	if (is_exit == 0)
-		error_msg("map_exit_error");
+		error_msg("MAP_EXIT_ERROR");
 }
 
 void	check_map(t_game *game)
