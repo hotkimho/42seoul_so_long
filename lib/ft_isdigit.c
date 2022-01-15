@@ -6,13 +6,13 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 17:27:05 by hkim2             #+#    #+#             */
-/*   Updated: 2021/05/27 17:27:46 by hkim2            ###   ########.fr       */
+/*   Updated: 2022/01/15 18:12:45 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if ('0' <= c && c <= '9')
 		return (1);

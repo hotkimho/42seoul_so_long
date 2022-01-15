@@ -6,13 +6,13 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/29 13:05:47 by hkim2             #+#    #+#             */
-/*   Updated: 2021/05/29 23:31:54 by hkim2            ###   ########.fr       */
+/*   Updated: 2022/01/15 18:12:53 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		get_size(int n)
+static int	get_size(int n)
 {
 	int		count;
 
@@ -28,7 +28,7 @@ static int		get_size(int n)
 	return (count);
 }
 
-char			*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	int			size;
 	char		*str;

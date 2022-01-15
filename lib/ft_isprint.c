@@ -6,13 +6,13 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 17:30:12 by hkim2             #+#    #+#             */
-/*   Updated: 2021/05/27 17:34:52 by hkim2            ###   ########.fr       */
+/*   Updated: 2022/01/15 18:12:48 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 		return (1);

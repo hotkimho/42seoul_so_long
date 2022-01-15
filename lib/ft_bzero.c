@@ -6,13 +6,13 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 13:59:17 by hkim2             #+#    #+#             */
-/*   Updated: 2021/05/20 14:08:45 by hkim2            ###   ########.fr       */
+/*   Updated: 2022/01/15 18:12:26 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned int	i;
 	char			*ptr;

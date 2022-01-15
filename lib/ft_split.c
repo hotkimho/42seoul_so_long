@@ -6,13 +6,13 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 16:40:00 by hkim2             #+#    #+#             */
-/*   Updated: 2021/06/02 15:58:26 by hkim2            ###   ########.fr       */
+/*   Updated: 2022/01/15 18:15:33 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char		**ft_error(char **s)
+static char	**ft_error(char **s)
 {
 	int			i;
 
@@ -23,10 +23,10 @@ static char		**ft_error(char **s)
 	return (NULL);
 }
 
-static int		find_size(char const *s, char c)
+static int	find_size(char const *s, char c)
 {
 	size_t			i;
-	int			count;
+	int				count;
 
 	i = 0;
 	count = 0;
@@ -43,7 +43,7 @@ static int		find_size(char const *s, char c)
 	return (count);
 }
 
-static void		ft_strcpy(char *dest, char const *src, int start, int end)
+static void	ft_strcpy(char *dest, char const *src, int start, int end)
 {
 	int			i;
 
@@ -53,7 +53,7 @@ static void		ft_strcpy(char *dest, char const *src, int start, int end)
 	dest[i] = 0;
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char			**split_s;
 	int				s_size;
