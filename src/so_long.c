@@ -6,7 +6,7 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/02 17:00:36 by hkim2             #+#    #+#             */
-/*   Updated: 2022/01/13 20:23:29 by hkim2            ###   ########.fr       */
+/*   Updated: 2022/01/15 17:51:45 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ int	main(int argc, char **argv)
 {
 	t_game	game;
 
-	argc = 0;
+	if (argc != 2)
+		error_msg("arg error");
 	game_init(&game, argv[1]);
 	mlx_hook(game.win, KEY_PRESS, 0, key_hook, &game);
 	mlx_hook(game.win, EXIT_BUTTON, 0, exit_hook, &game);
